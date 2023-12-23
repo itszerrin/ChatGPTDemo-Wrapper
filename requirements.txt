@@ -6,3 +6,4 @@ string
 json
 logging
 requests
+free-proxy
