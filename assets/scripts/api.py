@@ -36,8 +36,8 @@ logger = logging.getLogger(__name__)
 # set the logging level
 logger.setLevel(logging.DEBUG)
 
-# create a basic format
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+# configure the logger to use the basic format
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 # ------------------------------  ADDITIONAL VARIABLES ------------------------------ #
 
