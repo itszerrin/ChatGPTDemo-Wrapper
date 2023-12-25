@@ -46,6 +46,22 @@ def chat_completion():
     # get the messages
     messages = data["messages"]
 
+    # check if messages has a system message
+    if messages[0]["role"] == "system":
+
+        # enable system messages in ai
+        api.get_system_message(messages)
+
+    # try applying the assistants first message
+    try:
+
+        api.apply_assistant_first(messages)
+
+    except KeyError:
+
+        # we can pass this one
+        pass
+
     # this function handles streaming
     def stream():
 
