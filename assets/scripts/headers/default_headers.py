@@ -3,6 +3,7 @@
 def get_default_headers(user_agent, content_length: int):
 
     return {
+        'authority': 'chat.chatgptdemo.net',
         'method': 'POST',
         'url': '/new_chat',
         'protocol': 'HTTP/3',
